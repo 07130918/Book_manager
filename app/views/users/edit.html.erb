@@ -1,0 +1,7 @@
+<%= form_with model: current_user do |f| %>
+<p>Nickname</p>
+<%= f.text_field :nickname %>
+<p>読書を通しての目的</p>
+<%= f.text_field :purpose %>
+<%= f.submit "OK" %>
+<% end %>

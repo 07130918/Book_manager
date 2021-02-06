@@ -1,0 +1,16 @@
+<%= form_with model: @book do |f| %>
+<p>※タイトル、著者名は必須です</p>
+<%= f.text_field :title, placeholder: "タイトル" %>
+<%= f.text_field :author, placeholder: "著者" %>
+<%= f.submit %>
+<p>ハジェペテ大学知識をモノにする17の質問</p>
+<div class="question">
+    <% n = 1%>
+    <% while n <= 17 %>
+    <% hq = ("hq" + n.to_s).to_sym %>
+    <p>問<%= n %></p>
+    <%= f.text_field hq %>
+    <% n += 1 %>
+    <% end %>
+</div>
+<% end %>
