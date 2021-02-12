@@ -1,0 +1,22 @@
+<div class="side">
+  <!-- ハンバーガーメニューのアイコン -->
+  <div class="hamburger">
+    <span class="inner_line line__a"></span>
+    <span class="inner_line line__b"></span>
+    <span class="inner_line line__c"></span>
+  </div>
+  <!-- ナビメニュー -->
+  <nav class="nav">
+    <ul>
+      <% if current_user %>
+      <li><%= link_to "Sign_out", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "ユーザー情報変更", edit_user_path(current_user) %></li>
+      <li>
+        <%= link_to "アプリの使い方", root_path %>
+      </li>
+      <% else %>
+      <li>サインインしてください</li>
+      <% end %>
+    </ul>
+  </nav>
+</div>

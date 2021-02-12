@@ -1,13 +1,14 @@
 class BooksController < ApplicationController
   # ユーザーが読んだ本、読む本の新規作成、編集、更新、削除
   before_action :authenticate_user!
+  before_action :set_target_book, only: %i[show edit update destroy]
 
   def new
     @book = Book.new
   end
 
   def create
-    Book.create(create_params)
+    Book.create(book_params)
     redirect_to :root and return
   end
 
@@ -15,13 +16,20 @@ class BooksController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    @book.update(book_params)
+    render :show
+  end
 
   def destroy; end
 
   private
 
-  def create_params
+  def set_target_book
+    @book = Book.find(params[:id])
+  end
+
+  def book_params
     params
       .require(:book)
       .permit(

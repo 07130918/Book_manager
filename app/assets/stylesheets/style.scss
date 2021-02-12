@@ -1,16 +1,70 @@
-body {
+@import "./material.scss";
+// vscode
+.profiler-results {
+  display: none;
+}
+// application.html
+.header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: #181818;
+  color: #fff;
+  top: 0;
+  height: 6vh;
+  width: 100vw;
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 6vh;
+  height: 94vh;
 }
 
 .container {
-  width: 40vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 90vw;
+  max-height: 94vh;
 }
 
 .line {
   text-decoration: none;
   color: #000;
+}
+
+// root
+.view__cover {
+  width: 80vw;
+}
+
+.user {
+  position: fixed;
+  width: 80vw;
+  margin: 2vh 0;
+  @extend .waku;
+}
+
+.books {
+  position: absolute;
+  bottom: 0;
+  width: 80vw;
+  height: 74vh;
+  margin-bottom: 1vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+
+  .book {
+    @extend .waku;
+    margin-bottom: 2vh;
+  }
 }

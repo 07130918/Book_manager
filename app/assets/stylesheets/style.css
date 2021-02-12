@@ -1,3 +1,36 @@
+.waku, .user, .books .book {
+  border: solid 2px #000080;
+  padding: 1vh 2vw;
+  border-radius: 20px;
+}
+
+.profiler-results {
+  display: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #181818;
+  color: #fff;
+  top: 0;
+  height: 6vh;
+  width: 100vw;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,14 +38,48 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 6vh;
+  height: 94vh;
 }
 
 .container {
-  width: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90vw;
+  max-height: 94vh;
 }
 
 .line {
   text-decoration: none;
   color: #000;
+}
+
+.view__cover {
+  width: 80vw;
+}
+
+.user {
+  position: fixed;
+  width: 80vw;
+  margin: 2vh 0;
+}
+
+.books {
+  position: absolute;
+  bottom: 0;
+  width: 80vw;
+  height: 74vh;
+  margin-bottom: 1vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.books .book {
+  margin-bottom: 2vh;
 }
 /*# sourceMappingURL=style.css.map */

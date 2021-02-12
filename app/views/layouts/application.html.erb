@@ -2,21 +2,26 @@
 <html>
 
 <head>
-    <title>BookManager</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <title>BookManager</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <%= yield %>
-        </div>
+  <div class="header">
+  <%= link_to "Hacettepe book manager", root_path, class: "header__link" %>
+    <%# <p>Hacettepe book manager</p> %>
+    <%= render partial: 'layouts/side-bar' %>
+  </div>
+  <div class="wrapper">
+    <div class="container">
+      <%= yield %>
     </div>
+  </div>
 </body>
 
 </html>
