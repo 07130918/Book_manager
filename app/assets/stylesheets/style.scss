@@ -29,42 +29,32 @@
 }
 
 .container {
-  display: flex;
   position: relative;
-  justify-content: center;
   width: 90vw;
   max-height: 94vh;
 }
 
-.line {
-  text-decoration: none;
-  color: #000;
-}
-
 // root
 .view__cover {
-  width: 80vw;
+  margin: 2vh 5vw 0;
+  height: 90vh;
 }
 
 .user {
-  position: fixed;
-  width: 80vw;
-  margin: 2vh 0;
+  margin-bottom: 2vh;
   @extend .waku;
 }
 
 .books {
   position: absolute;
-  bottom: 0;
+  bottom: 2vh;
   width: 80vw;
   height: 74vh;
-  margin-bottom: 1vh;
   overflow-y: scroll;
   overflow-x: hidden;
 
-
   .book {
     @extend .waku;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
   }
 }
