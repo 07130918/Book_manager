@@ -1,0 +1,66 @@
+.cloud {
+  border: solid 2px #000080;
+  padding: 1vh 2vw;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 3px 1vh 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 3px 1vh 2px rgba(0, 0, 0, 0.4);
+}
+
+.scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.line {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.border-bb, .field, .edit-btn {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px #000;
+}
+
+.edit-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2vh 5vw;
+  padding-left: 4vw;
+}
+
+.edit-menu p {
+  margin-bottom: 1vh;
+}
+
+.line.back {
+  border-bottom: solid 2px #000;
+  margin-bottom: 2vh;
+}
+
+.field {
+  margin-bottom: 2vh;
+  width: 70vw;
+  resize: none;
+}
+
+.field:focus {
+  outline: none;
+}
+
+.edit-btn {
+  background-color: transparent;
+  padding-left: 0;
+}
+/*# sourceMappingURL=user-edit.css.map */

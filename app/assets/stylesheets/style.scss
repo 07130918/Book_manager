@@ -1,4 +1,5 @@
 @import "./material.scss";
+
 // vscode
 .profiler-results {
   display: none;
@@ -34,7 +35,7 @@
   max-height: 94vh;
 }
 
-// root
+// root(user :show)
 .view__cover {
   margin: 2vh 5vw 0;
   height: 90vh;
@@ -42,19 +43,18 @@
 
 .user {
   margin-bottom: 2vh;
-  @extend .waku;
+  @extend .cloud;
 }
 
 .books {
   position: absolute;
   bottom: 2vh;
   width: 80vw;
-  height: 74vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  height: 70vh;
+  @extend .scroll;
 
   .book {
-    @extend .waku;
+    @extend .cloud;
     margin-bottom: 1vh;
   }
 }

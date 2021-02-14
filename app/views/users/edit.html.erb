@@ -1,10 +1,12 @@
-<div>
-  <%= link_to "←戻る", root_path, class: "line" %>
+<div class="edit-menu">
+  <div>
+    <%= link_to "トップに戻る", root_path, class: "line back" %>
+  </div>
+  <%= form_with model: current_user do |f| %>
+  <p>1.Nickname</p>
+  <%= f.text_field :nickname, class: "field" %>
+  <p>2.読書を通しての目的(30文字以内)</p>
+  <%= f.text_area :purpose, maxlength: "30", class: "field" %>
+  <%= f.submit "Submit", class: "btn edit-btn" %>
+  <% end %>
 </div>
-<%= form_with model: current_user do |f| %>
-<p>Nickname</p>
-<%= f.text_field :nickname %>
-<p>読書を通しての目的(20文字以内)</p>
-<%= f.text_field :purpose, maxlength: "20" %>
-<%= f.submit "Submit" %>
-<% end %>
