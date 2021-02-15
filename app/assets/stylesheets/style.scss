@@ -37,7 +37,7 @@
 
 // root(user :show)
 .view__cover {
-  margin: 2vh 5vw 0;
+  margin-top: 2vh;
   height: 90vh;
 }
 
@@ -49,12 +49,18 @@
 .books {
   position: absolute;
   bottom: 2vh;
-  width: 80vw;
-  height: 70vh;
+  width: 90vw;
+  height: 72vh;
   @extend .scroll;
 
   .book {
     @extend .cloud;
     margin-bottom: 1vh;
+
+    &__info {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+    }
   }
 }

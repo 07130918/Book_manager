@@ -1,41 +1,49 @@
-<div>
-  <%= link_to "←戻る", root_path, class: "line" %>
+<div class="show-menu">
+  <div class="show-menu__link"><%= link_to "トップに戻る", root_path, class: "line back" %></div>
+  <div class="show-menu__book">
+    <div>タイトル：<%= @book.title %></div>
+    <div>著者：<%= @book.author %></div>
+    <div class="show-menu__book__info">
+      <div><%= link_to "編集する",  edit_book_path(@book.id), class: "line"%></div>
+      <div><%= link_to "削除する",  book_path(@book.id), method: :delete, class: "line"%></div>
+    </div>
+  </div>
+
+  <div class="show-menu__questions">
+    <p class="question"><span>Q1.</span>この本がテーマとしている問題提起は何か? その問題に対しどのような解決方法を提案しているか?</p>
+    <p class="answer"><span>A.</span><%= @book.hq1 %></p>
+    <p class="question"><span>Q2.</span>この本はどのように始まりどのように終わったか?</p>
+    <p class="answer"><span>A.</span><%= @book.hq2 %></p>
+    <p class="question"><span>Q3.</span>あなたはこの本からなにを学びたいか?</p>
+    <p class="answer"><span>A. </span><%= @book.hq3 %></p>
+    <p class="question"><span>Q4.</span>この本が同じジャンル他の本と似ている部分,違う部分はどこだろう？</p>
+    <p class="answer"><span>A. </span><%= @book.hq4 %></p>
+    <p class="question"><span>Q5.</span>この本はなぜ重要なのか？</p>
+    <p class="answer"><span>A. </span><%= @book.hq5 %></p>
+    <p class="question"><span>Q6.</span>この本のタイトルは内容と合っているだろうか？ あなたが本にタイトルを付け直すとしたら？</p>
+    <p class="answer"><span>A. </span><%= @book.hq6 %></p>
+    <p class="question"><span>Q7.</span>この本のキーポイントやコンセプトは何だろう？</p>
+    <p class="answer"><span>A. </span><%= @book.hq7 %></p>
+    <p class="question"><span>Q8.</span>本の書き出しをチェックして、作者は読者をひきこむためにどんなトピックを展開しているか？</p>
+    <p class="answer"><span>A. </span><%= @book.hq8 %></p>
+    <p class="question"><span>Q9.</span>本で扱われているビジュアル要素(チャート・地図・ラベル・グラフ・写真・図解)から何を学んだか？<br />それらの要素からどんな種類の情報を得ることができたのか
+    </p>
+    <p class="answer"><span>A. </span><%= @book.hq9 %></p>
+    <p class="question"><span>Q10.</span>著者は読者に対してどう考えて欲しいと思っているのだろうか</p>
+    <p class="answer"><span>A. </span><%= @book.hq10 %></p>
+    <p class="question"><span>Q11.</span>人に勧めるときどの情報を1番に取り上げるか</p>
+    <p class="answer"><span>A. </span><%= @book.hq11 %></p>
+    <p class="question"><span>Q12.</span>作者はこの本を面白くするためにどのような工夫をしているだろうか</p>
+    <p class="answer"><span>A. </span><%= @book.hq12 %></p>
+    <p class="question"><span>Q13.</span>作者の主張のどこに賛成できるか？またその理由は？</p>
+    <p class="answer"><span>A. </span><%= @book.hq13 %></p>
+    <p class="question"><span>Q14.</span>テーマを説明するために作者がどのような事例を出しているか？興味深かった例は？</p>
+    <p class="answer"><span>A. </span><%= @book.hq14 %></p>
+    <p class="question"><span>Q15.</span>この本を読んでいるときどんな感覚になったか？</p>
+    <p class="answer"><span>A. </span><%= @book.hq15 %></p>
+    <p class="question"><span>Q16.</span>この本で最も重要な1文はどれか？その理由は何か？</p>
+    <p class="answer"><span>A. </span><%= @book.hq16 %></p>
+    <p class="question"><span>Q17.</span>本の内容を振り返って、自分にとって１番刺さった箇所はどこか？</p>
+    <p class="answer"><span>A. </span><%= @book.hq17 %></p>
+  </div>
 </div>
-
-  <div>タイトル：<%= @book.title %></div>
-  <div>著者：<%= @book.author %></div>
-
-  <p>Q1. この本がテーマとしている問題提起は何か?<br />その問題に対しどのような解決方法を提案しているか?</p>
-  <%= @book.hq1 %>
-  <p>Q2. この本はどのように始まりどのように終わったか</p>
-  <%= @book.hq2 %>
-  <p>Q3. あなたはこの本からなにを学びたいか</p>
-  <%= @book.hq3 %>
-  <p>Q4. この本が同じジャンル他の本と似ている部分<br />違う部分はどこだろう？</p>
-  <%= @book.hq4 %>
-  <p>Q5. この本はなぜ重要なのか？</p>
-  <%= @book.hq5 %>
-  <p>Q6. この本のタイトルは内容と合っているだろうか？<br />あなたが本にタイトルを付け直すとしたら？</p>
-  <%= @book.hq6 %>
-  <p>Q7. この本のキーポイントやコンセプトは何だろう？</p>
-  <%= @book.hq7 %>
-  <p>Q8. 本の書き出しをチェックして、作者は読者をひきこむためにどんなトピックを展開しているか？</p>
-  <%= @book.hq8 %>
-  <p>Q9. 本で扱われているビジュアル要素(チャート・地図・ラベル・グラフ・写真・図解)から何を学んだか？<br />それらの要素からどんな種類の情報を得ることができたのか</p>
-  <%= @book.hq9 %>
-  <p>Q10. 著者は読者に対してどう考えて欲しいと思っているのだろうか</p>
-  <%= @book.hq10 %>
-  <p>Q11. 人に勧めるときどの情報を1番に取り上げるか</p>
-  <%= @book.hq11 %>
-  <p>Q12. 作者はこの本を面白くするためにどのような工夫をしているだろうか</p>
-  <%= @book.hq12 %>
-  <p>Q13. 作者の主張のどこに賛成できるか？またその理由は？</p>
-  <%= @book.hq13 %>
-  <p>Q14. テーマを説明するために作者がどのような事例を出しているか？興味深かった例は？</p>
-  <%= @book.hq14 %>
-  <p>Q15. この本を読んでいるときどんな感覚になったか？</p>
-  <%= @book.hq15 %>
-  <p>Q16. この本で最も重要な1文はどれか？その理由は何か？</p>
-  <%= @book.hq16 %>
-  <p>Q17. 本の内容を振り返って、自分にとって１番刺さった箇所はどこか？</p>
-  <%= @book.hq17 %>

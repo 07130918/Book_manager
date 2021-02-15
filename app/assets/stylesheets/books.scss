@@ -1,0 +1,47 @@
+@import "./material.scss";
+
+// books: :show
+.show-menu {
+  margin-top: 2vh;
+
+  &__link {
+    padding-left: 2vw;
+  }
+
+  &__book {
+    @extend .cloud;
+    margin-bottom: 2vh;
+
+    &__info {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+    }
+  }
+
+  &__questions {
+    position: absolute;
+    bottom: 2vh;
+    overflow-y: scroll;
+    max-height: 70vh;
+    padding: 0 2vw;
+
+    .question {
+      border-bottom: solid 1px #808080;
+
+      span {
+        @extend .q-and-a;
+        background-color: rgba(8, 8, 8, 0.2);
+      }
+    }
+    .answer {
+      margin: 1vh 0 2vh;
+      border-bottom: solid 1px #000080;
+
+      span {
+        @extend .q-and-a;
+        background-color: rgba(45, 45, 215, 0.2);
+      }
+    }
+  }
+}

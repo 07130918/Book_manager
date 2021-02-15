@@ -21,7 +21,10 @@ class BooksController < ApplicationController
     render :show
   end
 
-  def destroy; end
+  def destroy
+    @book.destroy
+    redirect_to :root and return
+  end
 
   private
 

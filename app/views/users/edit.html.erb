@@ -4,7 +4,7 @@
   </div>
   <%= form_with model: current_user do |f| %>
   <p>1.Nickname</p>
-  <%= f.text_field :nickname, class: "field" %>
+  <%= f.text_field :nickname, maxlength: "10", class: "field" %>
   <p>2.読書を通しての目的(30文字以内)</p>
   <%= f.text_area :purpose, maxlength: "30", class: "field" %>
   <%= f.submit "Submit", class: "btn edit-btn" %>

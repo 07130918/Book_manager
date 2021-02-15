@@ -9,8 +9,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :nickname %><span>(※必須)</span><br />
-    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+    <%= f.label :nickname %><span>(10文字以内)(※必須)</span><br />
+    <%= f.text_field :nickname, maxlength: "10", autofocus: true, autocomplete: "nickname" %>
   </div>
 
   <div class="field">

@@ -25,8 +25,11 @@
       <div>タイトル: <%= book.title %></div>
       <div>著者: <%= book.author %></div>
       <div>最終更新日: <%= book.updated_at.to_s(:datetime_jp) %></div>
-      <div><%= link_to "詳細",  book_path(book.id), class: "line"%></div>
-      <div><%= link_to "編集",  edit_book_path(book.id), class: "line"%></div>
+      <div class="book__info">
+        <div><%= link_to "詳細を見る",  book_path(book.id), class: "line"%></div>
+        <div><%= link_to "編集する",  edit_book_path(book.id), class: "line"%></div>
+        <div><%= link_to "削除する",  book_path(book.id), method: :delete, class: "line"%></div>
+      </div>
     </div>
     <% end %>
   </div>
