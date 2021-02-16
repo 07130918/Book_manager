@@ -12,7 +12,7 @@
       <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
       <li><%= link_to "ユーザー情報変更", edit_user_path(current_user) %></li>
       <li>
-        <%= link_to "お気に入りした本", root_path %>
+        <%= link_to "お気に入りした本", favorite_user_path(current_user) %>
       </li>
       <li>
         <%= link_to "アプリの使い方", root_path %>

@@ -12,7 +12,9 @@ class BooksController < ApplicationController
     redirect_to :root and return
   end
 
-  def show; end
+  def show
+    @like = Like.new
+  end
 
   def edit; end
 

@@ -5,6 +5,11 @@ class UsersController < ApplicationController
   #root_path
   def show
     @books = Book.where(user_id: current_user.id).order(updated_at: :DESC)
+    @like = Like.new
+  end
+
+  def favorite
+    @books = current_user.liked_books.order(updated_at: :DESC)
   end
 
   def edit; end
