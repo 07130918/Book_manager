@@ -1,12 +1,10 @@
 class UsersController < ApplicationController
   # ユーザーの今まで読んだ本、ユーザー情報の確認、変更、更新
+  before_action :authenticate_user!
+
   #root_path
   def show
-    if current_user
-      @books = Book.where(user_id: current_user.id).order(updated_at: :DESC)
-    else
-      redirect_to new_user_session_path
-    end
+    @books = Book.where(user_id: current_user.id).order(updated_at: :DESC)
   end
 
   def edit; end

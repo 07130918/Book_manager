@@ -44,6 +44,10 @@
 .user {
   margin-bottom: 2vh;
   @extend .cloud;
+
+  &__book-create {
+   @extend .border-bb;
+  }
 }
 
 .books {
@@ -63,4 +67,38 @@
       justify-content: space-between;
     }
   }
+}
+
+// user: :edit
+.edit-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 5vw;
+  padding-left: 4vw;
+
+  p {
+    margin-bottom: 1vh;
+  }
+}
+
+.line.back {
+  border-bottom: solid 2px #000;
+  margin-bottom: 2vh;
+}
+
+.field {
+  @extend .border-bb;
+  margin-bottom: 2vh;
+  width: 70vw;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.edit-btn {
+@extend .border-bb;
+background-color: transparent;
+padding-left: 0;
 }
