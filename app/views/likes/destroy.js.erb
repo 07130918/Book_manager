@@ -1,3 +1,1 @@
-document.addEventListener("turbolinks:load", () => {
-document.getElementById("book_<%= book.id %>").innerHTML="<%= j(render partial: 'books/iine') %>";
-});
+document.querySelector(".book_<%= @book.id %>").innerHTML="<%= escape_javascript(render("likes/like", book: @book  )) %>"

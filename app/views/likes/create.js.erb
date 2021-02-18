@@ -1,1 +1,1 @@
- document.querySelector(".book_<%= book.id %>").innerHTML"<%= j(render partial: 'books/iine', locals: {book: book})) %>";
+document.querySelector(".book_<%= @book.id %>").innerHTML="<%= escape_javascript(render("likes/like", book: @book  )) %>"
