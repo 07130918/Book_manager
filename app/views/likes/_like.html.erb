@@ -3,8 +3,18 @@
       <%# create.js.erb, destroy.js.erb %>
       <div>
         <% if current_user.already_liked?(book) %>
-        <%= link_to 'いいねを取り消す', book_like_path(book, current_user.id), method: :delete, remote: true %>
+        <%= link_to book_like_path(book, current_user.id), method: :delete, remote: true do %>
+          <i class="fas fa-heart btn unlike"></i>
+        <% end %>
+
         <% else %>
-        <%= link_to 'いいね', book_likes_path(book), method: :post, remote: true %>
+
+        <%= link_to book_likes_path(book), method: :post, remote: true do %>
+          <i class="fas fa-heart btn like"></i>
+        <% end %>
         <% end %>
       </div>
+
+
+      <%# できてないview %>
+      <%# book: :edit, book: :new, devise, user: :favorite, like: :_like %>

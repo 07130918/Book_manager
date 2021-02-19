@@ -10,7 +10,12 @@
 
   &__book {
     @extend .cloud;
-    margin-bottom: 2vh;
+
+    &__under {
+      position: relative;
+      height: 2vh;
+      width: 90vw;
+    }
 
     &__info {
       display: flex;
@@ -21,7 +26,7 @@
 
   &__questions {
     position: absolute;
-    bottom: 2vh;
+    top: 2vh;
     overflow-y: scroll;
     max-height: 70vh;
     padding: 0 2vw;

@@ -18,6 +18,7 @@
 
 .btn {
   display: inline-block;
+  text-decoration: none;
 }
 
 .border-bb {
@@ -31,4 +32,13 @@
   padding-right: 1vw;
   margin-right: 1vw;
   border-radius: 10px;
+}
+
+// like or unlike
+.unlike {
+  color: #e54747;
+}
+
+.like {
+  color: #808080;
 }
