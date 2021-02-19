@@ -32,7 +32,7 @@
 .container {
   position: relative;
   width: 90vw;
-  max-height: 94vh;
+  height: 94vh;
 }
 
 // root(user :show)
@@ -46,26 +46,40 @@
   @extend .cloud;
 
   &__book-create {
-   @extend .border-bb;
+    @extend .border-bb;
   }
 }
 
 .books {
   position: absolute;
-  bottom: 2vh;
-  width: 90vw;
-  height: 72vh;
   @extend .scroll;
+  width: 90vw;
+  bottom: 2vh;
+  height: 72vh;
 
-  .book {
-    @extend .cloud;
-    margin-bottom: 1vh;
+  // user: :favorite
+  &.height-84 {
+    height: 84vh;
+  }
+}
 
-    &__info {
-      display: flex;
-      width: 80%;
-      justify-content: space-between;
-    }
+.back-top {
+  padding-left: 2vw;
+}
+
+.not-favo {
+  padding-left: 2vw;
+}
+
+.book {
+  @extend .cloud;
+  margin-bottom: 1vh;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 2vw;
   }
 }
 
@@ -98,7 +112,7 @@
 }
 
 .edit-btn {
-@extend .border-bb;
-background-color: transparent;
-padding-left: 0;
+  @extend .border-bb;
+  background-color: transparent;
+  padding-left: 0;
 }

@@ -1,23 +1,13 @@
-  <div>
-    <%= link_to "トップに戻る", root_path, class: "line back" %>
-  </div>
-
-  <% @books.each do |book| %>
-  <div class="book">
-    <div>タイトル: <%= book.title %></div>
-    <div>著者: <%= book.author %></div>
-    <div>最終更新日: <%= book.updated_at.to_s(:datetime_jp) %></div>
-    <div class="book__info">
-      <div><%= link_to "詳細を見る",  book_path(book.id), class: "line"%></div>
-      <div><%= link_to "編集する",  edit_book_path(book.id), class: "line"%></div>
-      <div><%= link_to "削除する",  book_path(book.id), method: :delete, class: "line"%></div>
+  <div class="view__cover">
+    <div class="back-top">
+      <%= link_to "トップに戻る", root_path, class: "line back" %>
     </div>
-    <div class="book_<%=book.id%>">
-      <%= render partial: 'likes/like', locals: { book: book } %>
+    <% if @books.length == 0 %>
+    <p class="not-favo">お気に入りした本がありません</p>
+    <% end %>
+    <div class="books height-84">
+      <% @books.each do |book| %>
+      <%= render partial: 'books/abook', locals: { book: book } %>
+      <% end %>
     </div>
   </div>
-  <% end %>
-
-  <% if @books.length == 0 %>
-  <p>お気に入りした本がありません</p>
-  <% end %>

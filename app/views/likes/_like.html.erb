@@ -1,5 +1,5 @@
       <%# いいねアイコン共通view %>
-      <%# books/show, users/favorite, users/show(root) %>
+      <%# books/show, books: :_abook %>
       <%# create.js.erb, destroy.js.erb %>
       <div>
         <% if current_user.already_liked?(book) %>
@@ -17,4 +17,4 @@
 
 
       <%# できてないview %>
-      <%# book: :edit, book: :new, devise, user: :favorite, like: :_like %>
+      <%# book: :edit, book: :new, devise%>
