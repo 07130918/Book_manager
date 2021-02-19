@@ -8,7 +8,7 @@
       <div><%= link_to "削除する",  book_path(@book.id), method: :delete, class: "line"%></div>
     </div>
     <div class="book_<%=@book.id%>">
-      <%#= render partial: 'likes/iine', locals: { book: @book } %>
+      <%= render partial: 'likes/like', locals: { book: @book } %>
     </div>
   </div>
 
