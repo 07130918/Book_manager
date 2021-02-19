@@ -7,6 +7,9 @@
       <div><%= link_to "編集する",  edit_book_path(@book.id), class: "line"%></div>
       <div><%= link_to "削除する",  book_path(@book.id), method: :delete, class: "line"%></div>
     </div>
+    <div class="book_<%=@book.id%>">
+      <%= render partial: 'likes/like', locals: { book: @book } %>
+    </div>
   </div>
 
   <div class="show-menu__questions">

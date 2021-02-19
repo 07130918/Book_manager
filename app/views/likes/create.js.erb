@@ -1,0 +1,1 @@
+document.querySelector(".book_<%= @book.id %>").innerHTML="<%= escape_javascript(render("like", book: @book  )) %>"

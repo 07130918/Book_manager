@@ -28,6 +28,7 @@
 #
 class Book < ApplicationRecord
     belongs_to :user
+    has_one :like
 
     validates :title, presence: true
     validates :author, presence: true
