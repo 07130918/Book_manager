@@ -1,0 +1,20 @@
+<%# book: :new, book: :edit %>
+<div class="view__cover">
+  <div class="back-top">
+    <%= link_to "トップに戻る", root_path, class: "line back" %>
+  </div>
+  <%= form_with model: book do |f| %>
+  <div class="front-detail">
+    <p>※タイトル、著者名は必須です</p>
+    <%= f.text_field :title, placeholder: "タイトル", class: "front-detail__content" %>
+    <div class="front-detail__children">
+      <%= f.text_field :author, placeholder: "著者", class: "front-detail__content" %>
+      <%= f.button :type => "submit", class: "submit-icon in-cloud" do %>
+      <i class="fas fa-folder-plus fa-2x"></i>
+      <% end %>
+    </div>
+  </div>
+  <p class="front-detail__h17">ハジェペテ大学<br />知識をモノにする17の質問</p>
+  <%= render partial: 'questions', locals: { book: book } %>
+  <% end %>
+</div>

@@ -1,11 +1,1 @@
-<div>
-  <%= link_to "トップに戻る", root_path, class: "line back" %>
-</div>
-<%= form_with model: @book do |f| %>
-<p>※タイトル、著者名は必須です</p>
-<%= f.text_field :title, placeholder: "タイトル" %>
-<%= f.text_field :author, placeholder: "著者" %>
-<%= f.submit %>
-<p>ハジェペテ大学<br />知識をモノにする17の質問</p>
-<%= render partial: 'questions' %>
-<% end %>
+<%= render partial: 'plus-info', locals: { book: @book } %>

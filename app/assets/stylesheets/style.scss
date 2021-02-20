@@ -57,7 +57,7 @@
   bottom: 2vh;
   height: 72vh;
 
-  // user: :favorite
+  // user: :favorite until .not-favo
   &.height-84 {
     height: 84vh;
   }
@@ -70,7 +70,7 @@
 .not-favo {
   padding-left: 2vw;
 }
-
+// ----------------------------
 .book {
   @extend .cloud;
   margin-bottom: 1vh;

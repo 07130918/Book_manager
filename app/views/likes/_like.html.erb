@@ -4,17 +4,13 @@
       <div>
         <% if current_user.already_liked?(book) %>
         <%= link_to book_like_path(book, current_user.id), method: :delete, remote: true do %>
-          <i class="fas fa-heart btn unlike"></i>
+        <i class="fas fa-heart btn unlike"></i>
         <% end %>
 
         <% else %>
 
         <%= link_to book_likes_path(book), method: :post, remote: true do %>
-          <i class="fas fa-heart btn like"></i>
+        <i class="fas fa-heart btn like"></i>
         <% end %>
         <% end %>
       </div>
-
-
-      <%# できてないview %>
-      <%# book: :edit, book: :new, devise%>

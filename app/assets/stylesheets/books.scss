@@ -1,6 +1,6 @@
 @import "./material.scss";
 
-// books: :show
+// books: :show, books: :_question
 .show-menu {
   margin-top: 2vh;
 
@@ -24,13 +24,17 @@
       margin-left: 2vw;
     }
   }
-
+  // -----------------------------------------
   &__questions {
     position: absolute;
     top: 2vh;
     overflow-y: scroll;
     max-height: 70vh;
     padding: 0 2vw;
+
+    &.height-56 {
+      height: 56vh;
+    }
 
     .question {
       border-bottom: solid 1px #808080;
@@ -52,5 +56,44 @@
   }
 }
 
-// user: :favorite
+.front-detail {
+  @extend .cloud;
 
+  &__children {
+    display: flex;
+  }
+  &__h17 {
+    @extend .cloud;
+    margin-top: 2vh;
+  }
+
+  &__content {
+    @extend .border-bb;
+    margin-bottom: 1vh;
+    width: 50vw;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.border-none {
+  border: none;
+  width: 90%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.submit-icon {
+  @extend .mac-color;
+  @extend .btn;
+  background-color: transparent;
+  border: none;
+
+  &.in-cloud {
+    margin-left: 4vw;
+  }
+}
