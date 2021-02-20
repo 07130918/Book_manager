@@ -28,7 +28,7 @@
 #
 class Book < ApplicationRecord
     belongs_to :user
-    has_one :like
+    has_one :like, dependent: :destroy
 
     validates :title, presence: true
     validates :author, presence: true

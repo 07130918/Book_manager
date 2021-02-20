@@ -23,7 +23,8 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-    redirect_to :root and return
+    # お気に入りから消すとき,rootから消すときに対応
+    redirect_back(fallback_location: root_path) and return
   end
 
   private
