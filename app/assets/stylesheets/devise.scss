@@ -1,0 +1,52 @@
+@import "./material.scss";
+
+.devise-cover {
+  margin-top: 5vh;
+  margin-left: 10vw;
+}
+
+.devise {
+  &__sign {
+    margin: 1vh 0 2vh;
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    span {
+      margin-right: 1vw;
+    }
+    &.sign-in {
+      @extend .produce-color;
+      border: solid 2px rgb(0, 122, 204);
+    }
+
+    &.sign-up {
+      color: rgb(131, 237, 125);
+      border: solid 2px rgb(131, 237, 125);
+    }
+  }
+
+  &__link {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+
+    span {
+      margin-left: 1vw;
+    }
+    &.sign-up {
+      border: solid 2px rgb(131, 237, 125);
+      color: rgb(131, 237, 125);
+    }
+
+    &.sign-in {
+      @extend .produce-color;
+      border: solid 2px rgb(0, 122, 204);
+    }
+  }
+}
