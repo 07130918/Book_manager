@@ -15,7 +15,9 @@
         <%= link_to "お気に入りした本", favorite_user_path(current_user) %>
       </li>
       <li>
-        <%= link_to "アプリの使い方", root_path %>
+        <%= link_to descriptions_path do %>
+        アプリの使い方<br>(アイコンの説明)
+        <% end %>
       </li>
       <% else %>
       <li>サインインしてください</li>

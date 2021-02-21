@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update] do
     get 'favorite', on: :member
   end
-
   resources :books, except: [:index] do
     resources :likes, only: [ :create, :destroy]
   end
+  resources :descriptions, only: [:index]
 end

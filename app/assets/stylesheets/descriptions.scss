@@ -1,0 +1,20 @@
+@import "./material.scss";
+
+.descriptions__cover {
+  &__details {
+    @extend .cloud;
+    margin: 2vh 0;
+  }
+
+  &__icons {
+    padding: 0 1vw;
+
+     > div {
+      margin-top: 2vh;
+
+      span {
+        color: #ff0000;
+      }
+    }
+  }
+}
