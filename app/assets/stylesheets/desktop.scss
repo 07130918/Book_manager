@@ -1,5 +1,5 @@
 @import "./material.scss";
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
   // root
   .container {
     width: 62vw !important;
@@ -16,6 +16,7 @@
 
     &.height-56 {
       height: 52vh !important;
+      padding: 0;
     }
   }
 
@@ -24,9 +25,17 @@
   }
 
   // user: :edit
+  .edit-menu {
+    margin-top: 10vh !important;
+  }
+
   .desktop-field {
     display: flex;
     flex-direction: column;
+  }
+
+  .desktop-bottom {
+    margin-bottom: 4vh !important;
   }
 
   .edit-btn {
@@ -45,6 +54,23 @@
       &__icons > div {
         margin-top: 4vh;
       }
+    }
+  }
+
+  //toggle menu(side-bar)
+  .hamburger {
+    width: 40px !important;
+    left: 50px !important;
+  }
+  .inner_line {
+    width: 40px !important;
+  }
+  .nav > ul {
+    padding-top: 130px !important;
+
+    li {
+      margin-bottom: 50px !important;
+      width: 300px !important;
     }
   }
 
