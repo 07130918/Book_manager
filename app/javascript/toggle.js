@@ -7,7 +7,8 @@ document.addEventListener("turbolinks:load", () => {
     document.querySelector(".line__b").classList.toggle("line_2");
     document.querySelector(".line__c").classList.toggle("line_3");
     document.querySelector(".nav").classList.toggle("in");
-    document.querySelector(".container").classList.toggle("hide");
+    document.querySelector(".container").classList.toggle("open");
+    document.querySelector(".container").classList.toggle("close");
   }
   document
     .querySelector(".hamburger")

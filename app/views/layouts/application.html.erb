@@ -17,14 +17,14 @@
     <%= render partial: 'layouts/side-bar' %>
     <%= link_to "Hacettepe book manager", root_path, class: "header__link" %>
     <% if current_user %>
-      <%= link_to destroy_user_session_path, method: :delete, class: "header__link header__right" do %>
-        <i class="fas fa-sign-out-alt sign-out-big"></i>
-      <% end %>
+    <%= link_to destroy_user_session_path, method: :delete, class: "header__link header__right" do %>
+    <i class="fas fa-sign-out-alt sign-out-big"></i>
+    <% end %>
     <% end %>
   </div>
 
   <div class="wrapper">
-    <div class="container">
+    <div class="container open">
       <%= yield %>
     </div>
   </div>

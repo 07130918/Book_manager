@@ -2,7 +2,7 @@
   <div>
     <%= link_to "トップに戻る", root_path, class: "line back" %>
   </div>
-  <%= form_with model: current_user do |f| %>
+  <%= form_with model: current_user, class: "desktop-field" do |f| %>
   <p>1.Nickname (※必須)</p>
   <%= f.text_field :nickname, maxlength: "10", class: "field" %>
   <p>2.読書を通しての目的(30文字以内)</p>

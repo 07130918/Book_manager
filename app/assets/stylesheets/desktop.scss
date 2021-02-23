@@ -1,2 +1,59 @@
-@media screen and (min-width: 481px) {
+@import "./material.scss";
+@media only screen and (min-width: 1000px) {
+  // root
+  .container {
+    width: 62vw !important;
+  }
+
+  .books {
+    width: 62vw !important;
+  }
+
+  // books: :_plus-info
+  .show-menu__questions {
+    width: 62vw;
+    margin-top: 4vh;
+
+    &.height-56 {
+      height: 52vh !important;
+    }
+  }
+
+  .front-detail__h17 {
+    margin-bottom: 2vh;
+  }
+
+  // user: :edit
+  .desktop-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-btn {
+    width: 6vw;
+    text-align: left;
+  }
+
+  // descriptions: :index
+  .descriptions {
+    &__cover {
+      margin-top: 6vh;
+
+      &__details {
+        margin-bottom: 6vh;
+      }
+      &__icons > div {
+        margin-top: 4vh;
+      }
+    }
+  }
+
+  // devise view
+  .field {
+    width: 30vw !important;
+  }
+
+  .guest {
+    width: 170px !important;
+  }
 }
