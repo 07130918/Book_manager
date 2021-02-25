@@ -30,11 +30,10 @@
     top: 2vh;
     overflow-y: scroll;
     max-height: 70vh;
-    padding: 0 2vw;
+    padding: 0 2vw 300px;
 
     &.height {
       height: 65vh;
-      padding-bottom: 300px;
     }
 
     .question {
