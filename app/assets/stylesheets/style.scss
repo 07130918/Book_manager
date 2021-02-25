@@ -42,7 +42,7 @@
 .container {
   position: relative;
   width: 90vw;
-  height: 94vh;
+  max-height: 94vh;
 }
 
 // root(user: :show)
