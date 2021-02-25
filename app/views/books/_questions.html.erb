@@ -1,7 +1,7 @@
 <%# book: :_plus-info %>
 <%= form_with model: @book do |f| %>
 <div class="show-menu__book__under">
-  <div class="show-menu__questions height-56">
+  <div class="show-menu__questions height">
     <p class="question"><span>Q1.</span>この本がテーマとしている問題提起は何か? その問題に対しどのような解決方法を提案しているか?</p>
     <p class="answer"><span>A.</span><%= f.text_field :hq1, class: "border-none" %></p>
     <p class="question"><span>Q2.</span>この本はどのように始まりどのように終わったか?</p>

@@ -1,5 +1,5 @@
-@import "./material.scss";
 @media only screen and (min-width: 1024px) {
+  @import "./material.scss";
   // root
   .container {
     width: 62vw !important;
@@ -14,14 +14,16 @@
     width: 62vw;
     margin-top: 4vh;
 
-    &.height-56 {
+    &.height {
       height: 52vh !important;
       padding: 0;
     }
   }
 
   .front-detail__h17 {
-    margin-bottom: 2vh;
+    display: block;
+    @extend .cloud;
+    margin: 2vh 0;
   }
 
   // user: :edit

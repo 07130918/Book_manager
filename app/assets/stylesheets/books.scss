@@ -32,8 +32,9 @@
     max-height: 70vh;
     padding: 0 2vw;
 
-    &.height-56 {
-      height: 56vh;
+    &.height {
+      height: 65vh;
+      padding-bottom: 60px;
     }
 
     .question {
@@ -64,8 +65,7 @@
     display: flex;
   }
   &__h17 {
-    @extend .cloud;
-    margin-top: 2vh;
+    display: none;
   }
 
   &__content {
