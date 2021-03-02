@@ -7,8 +7,10 @@
   }
 
   &__icons {
-    padding: 0 1vw;
+    position: relative;
     overflow: scroll;
+    height: 40vh;
+    padding: 2vh 1vw 0;
 
      > div {
       margin-top: 2vh;
