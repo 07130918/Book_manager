@@ -17,12 +17,16 @@ class BooksController < ApplicationController
   def edit; end
 
   def update
-    @book.update(book_params)
-    render :show
+    if @book.update(book_params)
+      render :show
+    else
+      render :edit
+    end
   end
 
   def destroy
     @book.destroy
+
     # お気に入りから消すとき,rootから消すときに対応
     redirect_back(fallback_location: root_path) and return
   end
