@@ -8,8 +8,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(book_params)
-    redirect_to :root and return
+    @book = Book.new(book_params)
+    if @book.save
+      redirect_to :root and return
+    else
+      render :new
+    end
   end
 
   def show; end
@@ -17,6 +21,7 @@ class BooksController < ApplicationController
   def edit; end
 
   def update
+    # バリデーションチェック
     if @book.update(book_params)
       render :show
     else
@@ -26,9 +31,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-
-    # お気に入りから消すとき,rootから消すときに対応
-    redirect_back(fallback_location: root_path) and return
+    redirect_to :root and return
   end
 
   private
@@ -38,8 +41,7 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params
-      .require(:book)
+    params[:book]
       .permit(
         :author,
         :title,
