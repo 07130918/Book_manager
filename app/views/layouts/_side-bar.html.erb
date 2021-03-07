@@ -9,22 +9,21 @@
   <nav class="nav">
     <ul>
       <% if current_user %>
-      <li>
-        <%= link_to destroy_user_session_path, method: :delete do %>
-        Sign out <i class="fas fa-sign-out-alt sign-out-big"></i>
-        <% end %>
-      </li>
-      <li><%= link_to "ユーザー情報変更", edit_user_path(current_user) %></li>
-      <li>
-        <%= link_to "お気に入りした本", favorite_user_path(current_user) %>
-      </li>
-      <li>
-        <%= link_to descriptions_path do %>
-        アプリの使い方<br>(アイコンの説明)
-        <% end %>
-      </li>
+        <li><%= link_to "ホームへ", root_path %></li>
+        <li><%= link_to "ユーザー情報変更", edit_user_path(current_user) %></li>
+        <li><%= link_to "お気に入りした本", favorite_user_path(current_user) %></li>
+        <li>
+          <%= link_to descriptions_path do %>
+          アプリの使い方<br>(アイコンの説明)
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+          Sign out <i class="fas fa-sign-out-alt sign-out-big"></i>
+          <% end %>
+        </li>
       <% else %>
-      <li>サインインかサインアップしてください</li>
+        <li>サインインかサインアップしてください</li>
       <% end %>
     </ul>
   </nav>
