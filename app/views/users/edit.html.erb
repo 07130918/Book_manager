@@ -3,10 +3,18 @@
     <%= link_to "トップに戻る", root_path, class: "line back" %>
   </div>
   <%= form_with model: current_user, class: "desktop-field" do |f| %>
-  <p>1.Nickname (※必須)</p>
-  <%= f.text_field :nickname, maxlength: "10", class: "field desktop-bottom" %>
-  <p>2.読書を通しての目的(30文字以内)</p>
-  <%= f.text_area :purpose, maxlength: "30", class: "field desktop-bottom" %>
+  <% if current_user.email == "guest@example.com" %>
+    <p class="guest-info">ゲストユーザーは情報を変えることができません</p>
+    <p>1.Nickname (※必須)</p>
+    <%= f.text_field :nickname, readonly: true, maxlength: "10", class: "field desktop-bottom" %>
+    <p>2.読書を通しての目的(30文字以内)</p>
+    <%= f.text_area :purpose, readonly: true, maxlength: "30", class: "field desktop-bottom" %>
+  <% else %>
+    <p>1.Nickname (※必須)</p>
+    <%= f.text_field :nickname, maxlength: "10", class: "field desktop-bottom" %>
+    <p>2.読書を通しての目的(30文字以内)</p>
+    <%= f.text_area :purpose, maxlength: "30", class: "field desktop-bottom" %>
+  <% end %>
   <%= f.submit "Submit", class: "btn edit-btn desktop-bottom" %>
   <% end %>
 </div>

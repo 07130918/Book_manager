@@ -53,8 +53,12 @@
       &__details {
         margin-bottom: 6vh;
       }
-      &__icons > div {
-        margin-top: 4vh;
+      &__icons {
+        overflow: hidden;
+        height: auto;
+        > div {
+          margin-top: 4vh;
+        }
       }
     }
   }
